@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator danych</title>
+</head>
+<body>
+    <form id="userForm">
+        <label for="userRodowe">Nazwisko rodowe:</label>
+        <input type="text" id="userRodowe" name="userRodowe"><br><br>
+
+        <label for="userPlec">Płeć:</label>
+        <input type="text" id="userPlec" name="userPlec"><br><br>
+
+        <label for="dadSurname">Nazwisko rodowe ojca:</label>
+        <input type="text" id="dadSurname" name="dadSurname"><br><br>
+
+        <label for="momSurname">Nazwisko rodowe matki:</label>
+        <input type="text" id="momSurname" name="momSurname"><br><br>
+
+        <label for="userLocation">Miejsce urodzenia:</label>
+        <input type="text" id="userLocation" name="userLocation"><br><br>
+
+        <label for="userAdres">Adres zameldowania na pobyt stały:</label>
+        <input type="text" id="userAdres" name="userAdres"><br><br>
+
+        <label for="userPostcode">Kod pocztowy:</label>
+        <input type="text" id="userPostcode" name="userPostcode"><br><br>
+
+        <label for="userdata_zameldowania">Data zameldowania:</label>
+        <input type="date" id="userdata_zameldowania" name="userdata_zameldowania"><br><br>
+
+        <button type="button" onclick="generateData()">Generuj</button>
+    </form>
+
+    <script>
+        function generateData() {
+            const form = document.getElementById("userForm");
+            const formData = new FormData(form);
+
+            // Tworzenie URL z parametrami query
+            let url = "id.html?";
+            for (const [key, value] of formData.entries()) {
+                url += `${key}=${encodeURIComponent(value)}&`;
+            }
+
+            // Usunięcie ostatniego & z URL
+            url = url.slice(0, -1);
+
+            // Przekierowanie na stronę id.html
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
