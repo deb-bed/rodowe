@@ -260,7 +260,7 @@
             <p class="krecha"></p>
             <section class="dana">
                 <p class="info">Data zameldowania na pobyt stały</p>
-                <p class="main" id="userdata_zameldowania">brak</p>
+                <p class="main" id="userdata_zameldowania">2020-09-09</p>
             </section>
         </div>
     </div>
@@ -274,7 +274,7 @@
         function displayData() {
             const params = getQueryParams();
 
-            // Ustawianie danych w odpowiednich elementach
+            // Sprawdzanie, czy dane istnieją w URL i ustawianie ich w odpowiednich elementach
             document.getElementById("userRodowe").textContent = params.userRodowe || "brak";
             document.getElementById("userPlec").textContent = params.userPlec || "brak";
             document.getElementById("dadSurname").textContent = params.dadSurname || "brak";
@@ -288,7 +288,6 @@
         // Wywołanie funkcji displayData po załadowaniu strony
         window.onload = displayData;
     </script>
-
   <a class="buto">
     <div>
         <p class="info">Ostatnia aktualizacja</p>
