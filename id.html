@@ -234,33 +234,33 @@
             <p class="krecha"></p>
             <section class="dana">
                 <p class="info">Płeć</p>
-                <p class="main" id="userPlec">brak</p>
+                <p id="userPlec">brak</p>
             </section>
             <p class="krecha"></p>
             <section class="dana">
                 <p class="info">Nazwisko rodowe ojca</p>
-                <p class="main" id="dadSurname">brak</p>
+                <p id="dadSurname">brak</p>
             </section>
             <p class="krecha"></p>
             <section class="dana">
                 <p class="info">Nazwisko rodowe matki</p>
-                <p class="main" id="momSurname">brak</p>
+                <p id="momSurname">brak</p>
             </section>
             <p class="krecha"></p>
             <section class="dana">
                 <p class="info">Miejsce urodzenia</p>
-                <p class="main" id="userLocation">brak</p>
+                <p id="userLocation">brak</p>
             </section>
             <p class="krecha"></p>
             <p class="krecha"></p>
             <section class="dana">
                 <p class="info">Adres zameldowania na pobyt stały</p>
-                <p class="main" id="userAdres">brak</p><br><p class="main" id="userPostcode">brak</p>
+                <p id="userAdres">brak</p><br><p id="userPostcode">brak</p>
             </section>
             <p class="krecha"></p>
             <section class="dana">
                 <p class="info">Data zameldowania na pobyt stały</p>
-                <p class="main" id="userdata_zameldowania">2020-09-09</p>
+                <p id="userdata_zameldowania">brak</p>
             </section>
         </div>
     </div>
@@ -275,14 +275,14 @@
             const params = getQueryParams();
 
             // Sprawdzanie, czy dane istnieją w URL i ustawianie ich w odpowiednich elementach
-            document.getElementById("userRodowe").textContent = params.userRodowe || "brak";
-            document.getElementById("userPlec").textContent = params.userPlec || "brak";
-            document.getElementById("dadSurname").textContent = params.dadSurname || "brak";
-            document.getElementById("momSurname").textContent = params.momSurname || "brak";
-            document.getElementById("userLocation").textContent = params.userLocation || "brak";
-            document.getElementById("userAdres").textContent = params.userAdres || "brak";
-            document.getElementById("userPostcode").textContent = params.userPostcode || "brak";
-            document.getElementById("userdata_zameldowania").textContent = params.userdata_zameldowania || "brak";
+            document.getElementById("userRodowe").textContent = params.userRodowe || "";
+            document.getElementById("userPlec").textContent = params.userPlec || "";
+            document.getElementById("dadSurname").textContent = params.dadSurname || "";
+            document.getElementById("momSurname").textContent = params.momSurname || "";
+            document.getElementById("userLocation").textContent = params.userLocation || "";
+            document.getElementById("userAdres").textContent = params.userAdres || "";
+            document.getElementById("userPostcode").textContent = params.userPostcode || "";
+            document.getElementById("userdata_zameldowania").textContent = params.userdata_zameldowania || "";
         }
 
         // Wywołanie funkcji displayData po załadowaniu strony
